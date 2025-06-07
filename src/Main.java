@@ -14,5 +14,8 @@ public class Main {
         StringTransformer.outShortestString(s1, s2, s3);
         System.out.println();
         StringTransformer.arrangeStrings(s1, s2, s3);
+        StringTransformer.lengthLessThanAverage(s1, s2, s3);
+        StringTransformer.diffSimbols(s1, s2, s3);
+        StringTransformer.stringDoubler(s1);
     }
 }
