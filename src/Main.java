@@ -17,5 +17,14 @@ public class Main {
         StringTransformer.lengthLessThanAverage(s1, s2, s3);
         StringTransformer.diffSimbols(s1, s2, s3);
         StringTransformer.stringDoubler(s1);
+
+        System.out.println("Введите произвольные слова");
+        String s4 = scanner.nextLine();
+        System.out.println("Введите номер слова");
+        int num = scanner.nextInt();
+        StringTransformer.isPalindrom(s4, num);
+
+
+
     }
 }

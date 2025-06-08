@@ -87,25 +87,77 @@ public class StringTransformer {
                 int count = memoryCount + 1;
                 for (; count < string.length(); count++) {
                     if (string.charAt(memoryCount) == string.charAt(count)) {
-                       flag = true;
-                       break;
+                        flag = true;
+                        break;
                     }
                 }
-                if(flag){
+                if (flag) {
                     break;
                 }
             }
-            if(!flag){
+            if (!flag) {
                 System.out.println(string);
                 break;
             }
         }
     }
 
-    public static void stringDoubler(String string){
-        for(int count = 0; count< string.length(); count++){
+    public static void stringDoubler(String string) {
+        for (int count = 0; count < string.length(); count++) {
             System.out.print(string.charAt(count));
             System.out.print(string.charAt(count));
         }
     }
+
+    public static void isPalindrom(String string, int num) {
+        boolean flag = false;
+        int amount = 0;
+        int beginPoint = 0;
+        int endPoint = 0;
+        int qantity = 0;
+        for (int count = 0; count < string.length(); count++) {
+            if (string.charAt(count) == ' ') {
+                amount++;
+            }
+
+            if (string.charAt(count) == ' ' && amount == num) {
+                endPoint = count;
+                break;
+            }
+
+            if (flag) {
+                qantity++;
+            }
+
+            if (string.charAt(count) == ' ' && amount == num - 1) {
+                beginPoint = count;
+                flag = true;
+            }
+
+        }
+
+        if (qantity % 2 != 0) {
+            System.out.println("Слово не является палиндромом");
+        }
+
+        flag = false;
+        for (int count = 0;count < qantity/2; count++){
+            if(string.charAt(beginPoint) != string.charAt(endPoint)){
+                flag = true;
+                break;
+            }
+            beginPoint++;
+            endPoint--;
+        }
+
+        if(!flag){
+            System.out.println("Слово является палиндромом");
+        }
+
+        if(flag){
+            System.out.println("Слово не является палиндромом");
+        }
+    }
+
+
 }
