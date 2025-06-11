@@ -24,7 +24,11 @@ public class Main {
         int num = scanner.nextInt();
         StringTransformer.isPalindrom(s4, num);
 
-
-
+        System.out.println("Введите строку");
+        String text = scanner.nextLine();
+        RegEx.outAbbr(text);
+        System.out.println("Введите email, номер документ(а/ов) и номер телефона");
+        String text1 = scanner.nextLine();
+        RegEx.outInfo(text1);
     }
 }
